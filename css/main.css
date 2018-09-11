@@ -47,9 +47,10 @@ ul {
 .clearfix::after {
     content: ".";
     display: block;
-    height: 600p;
+    height: 570px;
     clear: both;
     visibility: hidden;
+    z-index: 0;
 }
 
 .button {
@@ -58,9 +59,44 @@ ul {
     border-radius: 20px;
 }
 
+.orange-btn {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fefefe;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-image: -webkit-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -o-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient(to right, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.17);
+}
+
+.orange-btn:hover,
+.orange-btn:focus {
+    background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.47);
+}
+
+.orange-btn:active {
+    border-bottom: none;
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+    border-top: 3px solid rgba(0, 0, 0, 0.47);
+}
+
 .page {
     background-color: #849d8f;
     min-width: 900px;
+    transition: 2s;
 }
 
 .main-head {
@@ -83,6 +119,7 @@ ul {
 
 .menu-item {
     position: relative;
+    z-index: 10;
 }
 
 .wrapper-list {
@@ -203,6 +240,7 @@ ul {
     margin-left: auto;
     padding-top: 12px;
     max-height: 45px;
+    z-index: 10;
 }
 
 .user-nav a {
@@ -265,6 +303,7 @@ ul {
     right: 210px;
     bottom: -86px;
     padding-top: 20px;
+    z-index: 5;
 }
 
 .background-panel {
@@ -324,6 +363,287 @@ ul {
     flex-wrap: wrap;
 }
 
+.user-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.links {
+    max-width: 158px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+    margin-left: 40px
+}
+
+.links a {
+    border-radius: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #323232;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.links a:hover,
+.links a:focus {
+    background: none;
+    color: #e84d37;
+}
+
+.call a {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: none;
+    font-size: 22px;
+}
+
+.call a:hover,
+.call a:focus {
+    background-color: rgba(0, 0, 0, 0);
+    color: #e84d37;
+}
+
+.call {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    right: 0;
+    top: 65px;
+    z-index: 0;
+}
+
+/*-------------- MAIN -----------------*/
+
+.page-content {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+}
+
+.icecream-list {
+    position: relative;
+}
+
+.icecream-item {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    z-index: 0;
+    transition: 1s;
+}
+
+.current {
+    transition: 2s;
+    opacity: 1;
+    z-index: 1;
+}
+
+.image-wrapper {
+    margin: 0 auto;
+    max-width: 91%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    margin-top: -74px;
+}
+
+.description {
+    position: absolute;
+    display: block;
+    top: 320px;
+    min-width: 700px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.description p {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 60px;
+    line-height: 60.35px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.description a {
+    display: block;
+    font-size: 32px;
+    width: 280px;
+    height: 65px;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.slider-toogle {
+    position: absolute;
+    bottom: 57px;
+    z-index: 5;
+}
+
+.slider-toogle button {
+    width: 21px;
+    height: 21px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0);
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.slider-toogle button:hover,
+.slider-toogle button:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slider-toogle .current-slide {
+    background-color: rgb(255, 255, 255);
+}
+
+/*--------------- BONUS --------------*/
+
+.bonus {
+    margin-bottom: 40px;
+}
+
+.bonus-list {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.bonus-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 49%;
+    border-radius: 21px;
+    z-index: 1;
+    padding: 14px 20px;
+}
+
+.bonus-item p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.bonus-item p:first-child {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.bonus-item p:nth-child(2){
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 46px;
+}
+
+.bonus-item .orange-btn {
+    margin-left: auto;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+}
+
+.raspberries {
+    background: url('../img/raspberries.jpg') no-repeat center;
+}
+
+.chocolate {
+    background: url('../img/chocolate.jpg') no-repeat center;
+}
+
+/*--------------- CARTS --------------*/
+
+.cart-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item {
+    position: relative;
+    max-width: 267px;
+    z-index: 5;
+}
+
+.cart-item p {
+    margin: 0;
+    color: #fff;
+}
+
+.text-wrapper {
+    position: absolute;
+    bottom: -80px;
+}
+
+.cost {
+    font-size: 45px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.text-wrapper p:nth-child(2) {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.text-wrapper .orange-btn {
+    position: absolute;
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.cart-item .orange-btn {
+    display: none;
+}
+
+.cart-item::before {
+    content: '';
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: url('../img/hit.png') no-repeat center;
+}
+
+.cart-item:hover::after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 420px;
+    top: -5%;
+    left: -5%;
+    border-radius: 10px;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.21);
+}
+
+.cart-item:hover .orange-btn {
+    display: block;
+}
+
+.icecream-wrapper img {
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -332,6 +652,14 @@ ul {
 
 
 
+
+
+
+
+
+.clear {
+    min-height: 500px;
+}
 
 .active {
     display: block;

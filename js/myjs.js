@@ -1,3 +1,22 @@
+//---------------------- SLIDER CONTROLLER --------------------
+$('.slider-btn').on('click', function(){
+//    var n= $(par).index();
+    var n= $(this).html();
+    $('.slider-btn').removeClass('current-slide');
+    $('.icecream-item').removeClass('current');
+    $(this).addClass('current-slide');
+    
+    
+    $('.icecream-list').children().eq(n-1).addClass('current');
+    
+    if (n == 1) { $('.page').css('background-color', '#849d8f'); }
+    if (n == 2) { $('.page').css('background-color', '#8996a6'); }
+    if (n == 3) { $('.page').css('background-color', '#9d8b84'); }
+    
+    
+    console.log('['+n+']');
+});
+
 
 
 //---------------------- MAP ---------------------------

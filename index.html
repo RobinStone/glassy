@@ -65,16 +65,20 @@
             </svg>
         Вход
         </a>
-        <div class="wrapper-panel active">
+        <form class="wrapper-panel" action="https://echo.htmlacademy.ru" method="post">
            <div class="background-panel">
                 <input type="text" name="searching" placeholder="Электронная почта">
                 <input type="text" name="searching" placeholder="Пароль">
-                .
+                <div class="user-form">
+                    <button type="submit" class="orange-btn">Войти</button>
+                    <div class="links">
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                    </div>
+                </div>
            </div>
-        </div>
-        
-        
-        
+        </form>
+                
         <a href="#" class="bag button">
             <svg version="1.1" id="Layer_1" xmlns: x="0px" y="0px"
                  width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
@@ -87,13 +91,128 @@
             </svg>
         Пусто
         </a>
+    <div class="call">
+        С 10 до 20, ежедневно
+        <a href="tel: +88124502525">8 812 450-25-25</a>
+    </div>
     </section>
 </header>
+   
+<main class="page-content">
+    <section class="slider wrapper clearfix">
+        <h2 class="visually-hidden">слайдер с мороженым</h2>
+        <ul class="icecream-list">
+            <li class="icecream-item current">
+                <div class="image-wrapper">
+                    <img src="img/icecream_1.png" width="1045" height="881" alt="slide-1">
+                </div>
+                <div class="description">
+                    <p>Крем-брюле и пломбир с малиновым джемом</p>
+                    <a href="#" class="orange-btn">Давайте оба!</a>
+                </div>
+            </li>
+            <li class="icecream-item">
+                <div class="image-wrapper">
+                    <img src="img/icecream_2.png" width="1045" height="881" alt="slide-1">
+                </div>
+                <div class="description">
+                    <p>Шоколадный пломбир и лимонный сорбет</p>
+                    <a href="#" class="orange-btn">Давайте оба!</a>
+                </div>
+            </li>
+            <li class="icecream-item">
+                <div class="image-wrapper">
+                    <img src="img/icecream_3.png" width="1045" height="881" alt="slide-1">
+                </div>
+                <div class="description">
+                    <p>Пломбир с помадкой и клубничный щербет</p>
+                    <a href="#" class="orange-btn">Давайте оба!</a>
+                </div>
+            </li>
+        </ul>
+        <div class="slider-toogle">
+            <button type="button" class="slider-btn current-slide">1</button>
+            <button type="button" class="slider-btn">2</button>
+            <button type="button" class="slider-btn">3</button>
+        </div>
+    </section>
+   
+    <section class="bonus wrapper">
+        <h2 class="visually-hidden">Бонусы</h2>
+        <ul class="bonus-list">
+            <li class="bonus-item raspberries">
+                <p>Малинка даром!</p>
+                <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                <a class="orange-btn">Хочу варенье!</a>
+            </li>
+            <li class="bonus-item chocolate">
+                <p>Шоколадки даром!</p>
+                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                <a class="orange-btn">Хочу шоколадки!</a>
+            </li>
+        </ul>
+    </section>
     
+    <section class="carts-icecream wrapper">
+        <h2 class="visually-hidden">Карточки с мороженым</h2>
+        <ul class="cart-list">
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">310    <sub>/кг</sub></p>
+                    <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/2.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">380    <sub>/кг</sub></p>
+                    <p>Сливочно-кофейное с кусочками шоколада</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/3.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                <p class="cost">355    <sub>/кг</sub></p>
+                <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/4.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">415    <sub>/кг</sub></p>
+                    <p>Сливочное крем-брюле с карамельной подливкой</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+        </ul>
+    </section>
     
+    <section class="clear">
+        
+    </section>
     
-    
+</main>
 
+   
+   
+   
+   
+   
+   
+   
+   
     <script src="js/jquery-3.3.1.min.js"></script>
 <!--    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
     <script src="js/myjs.js"></script>
