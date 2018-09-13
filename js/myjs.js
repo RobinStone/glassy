@@ -1,3 +1,19 @@
+//---------------------- POPAP CONTROLLER --------------------
+
+function hidePopap () {
+    $('.popap').removeClass('show-popap');
+    $('.overlay').css('display', 'none');
+}
+
+$('#popap-btn').on('click', function(){
+    $('.popap').addClass('show-popap');
+    $('.overlay').css('display', 'block');
+});
+
+$('.close-popap-btn').on('click', hidePopap);
+
+$('.overlay').on('click', hidePopap);
+
 //---------------------- SLIDER CONTROLLER --------------------
 $('.slider-btn').on('click', function(){
 //    var n= $(par).index();

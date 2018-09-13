@@ -807,7 +807,7 @@ ul {
 
 .address-block {
     position: absolute;
-    right: 27px;
+    margin-left: calc(50% + 220px);
     top: 62px;
     background-color: #fffffe;
     max-width: 302px;
@@ -847,7 +847,7 @@ ul {
 .social {
     display: flex;
     align-self: center;
-    margin-right: 222px;
+    margin-right: 19.5%;
 }
 
 .social li {
@@ -957,7 +957,7 @@ ul {
     position: fixed;
     display: flex;
     flex-wrap: wrap;
-    top: -100vh;
+    top: -50vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
@@ -966,6 +966,13 @@ ul {
     padding: 21px 29px;
     font-size: 16px;
     max-width: 530px;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.show-popap {
+   top: 20vh;
+    opacity: 1;
 }
 
 .overlay {
@@ -990,12 +997,14 @@ ul {
     transition: 0.3s;
     opacity: 0.8;
     outline: none;
+    color: rgba(0, 0, 0, 0);
 }
 
 .close-popap-btn::before {
     position: absolute;
     content: '';
-    top: 10px;
+    top: 15px;
+    left: 2px;
     width: 25px;
     height: 2px;
     transform: rotate(45deg);
@@ -1005,7 +1014,8 @@ ul {
 .close-popap-btn::after {
     position: absolute;
     content: '';
-    top: 10px;
+    top: 15px;
+    left: 2px;
     width: 25px;
     height: 2px;
     transform: rotate(-45deg);
@@ -1016,7 +1026,6 @@ ul {
 .close-popap-btn:focus {
     transform: scale(1.2);
     opacity: 1;
-    right: 25px;
 }
 
 .close-popap-btn:active {
