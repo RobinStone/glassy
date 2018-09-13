@@ -94,6 +94,7 @@ ul {
 }
 
 .page {
+    position: relative;
     background-color: #849d8f;
     min-width: 900px;
     transition: 2s;
@@ -568,6 +569,10 @@ ul {
 
 /*--------------- CARTS --------------*/
 
+.carts-icecream {
+    margin-bottom: 91px;
+}
+
 .cart-list {
     display: flex;
     justify-content: space-between;
@@ -645,14 +650,415 @@ ul {
     height: 100%;
 }
 
+/*------------- ADVANTAGES ------------*/
+
+.advantages {
+    padding: 0 27px;
+    margin-bottom: 40px;
+}
+
+.wrapper-2 {
+    background: url('../img/wafer.jpg') no-repeat center;
+    border-radius: 15px;
+    background-size:cover;
+    color: #323232;
+    padding: 25px 20px 0px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages p {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.advantages-item {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    flex-basis: 50%;
+    padding: 0 10px 28px 56px;
+}
+
+.icecream-ico::before,
+.cow-ico::before,
+.leaflet-ico::before,
+.thermometer-ico::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 60px;
+    left: 0;
+    top: -18px;
+}
+
+.icecream-ico::before {
+    background: url('../img/ico-ice-cream.svg') no-repeat center;
+}
+
+.cow-ico::before {
+    background: url('../img/ico-cow.svg') no-repeat center;
+}
+
+.leaflet-ico::before {
+    background: url('../img/ico-leaflet.svg') no-repeat center;
+}
+
+.thermometer-ico::before {
+    background: url('../img/ico-thermometer.svg') no-repeat center;
+}
+
+/*------- NEW AND SUBSCRIPTION --------*/
+
+.new-and-subscription {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.block {
+    flex-basis: 50%;
+    border-radius: 15px;
+}
+
+.new-in-blog {
+    background: url('../img/strawberry.jpg') no-repeat center;
+    padding: 25px 20px;
+    padding-bottom: 80px;
+    background-size: cover;
+    margin-right: 25px;
+}
+
+.new-in-blog h3 {
+    font-size: 16px;
+    color: #323232;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7px;
+}
+
+.new-in-blog a {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #323232;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    max-width: 300px;
+}
 
 
+.subscription {
+    display: flex;
+    flex-wrap: wrap;
+    background: url('../img/mail-fone.png') no-repeat center;
+    padding: 17px 26px;
+    background-size: cover;
+}
+
+.subscription p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #323232;
+    margin-bottom: 16px;
+}
+
+.subscription input {
+    font-size: 16px;
+    padding: 15px;
+    line-height: 24px;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+    height: 44px;
+    flex-grow: 2;
+    outline: none;
+    margin-right: 18px;
+}
+
+.subscription button {
+    height: 45px;
+}
+
+/*--------------- MAP ---------------*/
+
+.interactive-map {
+    position: relative;
+}
+
+.interactive-map img {
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 430px;
+}
+
+.address-block {
+    position: absolute;
+    right: 27px;
+    top: 62px;
+    background-color: #fffffe;
+    max-width: 302px;
+    border-radius: 20px;
+    padding: 32px 20px;
+}
+
+.address-block p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #323232;
+    margin: 0;
+}
+
+.address-block p:nth-child(2n) {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.address-block p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.address-block p:nth-child(5) {
+    margin-bottom: 26px;
+}
+
+/*------------ FOOTER --------------*/
+
+.main-footer {
+    display: flex;
+    padding: 30px;
+}
+
+.social {
+    display: flex;
+    align-self: center;
+    margin-right: 222px;
+}
+
+.social li {
+    margin-right: 14px;
+}
+
+.social a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.twitter {
+    background: url('../img/twitter.svg') no-repeat center;
+}
+
+.instagram {
+    background: url('../img/instagram.svg') no-repeat center;
+}
+
+.facebook {
+    background: url('../img/facebook.svg') no-repeat center;
+}
+
+.vk {
+    background: url('../img/vk.svg') no-repeat center;
+}
+
+.reference-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reference-info li {
+    flex-basis: 36%;
+    line-height: 18px;
+}
+
+.reference-info a {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    line-height: 23px;
+    text-decoration: underline;
+}
+
+.hart {
+    position: relative;
+}
+
+.hart::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    left: -30px;
+    top: -3px;
+    z-index: 10;
+    background: url('../img/hart.svg') no-repeat center;
+}
+
+.html-academy {
+    position: relative;
+    margin-left: auto;
+}
+
+.html-wrapper {
+    position: absolute;
+    width: 105px;
+    height: 34px;
+    left: 5px;
+    top: -12px;
+}
+
+.html-academy a {
+    display: block;
+    width: 190px;
+    padding-top: 35px;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.reference-info a:hover,
+.reference-info a:focus,
+.html-academy a:hover,
+.html-academy a:focus {
+    color: #ff4b4b;
+}
+
+.social a:hover,
+.social a:focus {
+    opacity: 1;
+}
+
+.social a:active {
+    opacity: 0.3;
+}
+
+/*---------- POPAP --------*/
+
+.popap {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    top: -100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    background-color: #f8f7f4;
+    border-radius: 15px;
+    padding: 21px 29px;
+    font-size: 16px;
+    max-width: 530px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    left 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.46);
+    z-index: 10;
+}
+
+.close-popap-btn {
+    position: absolute;
+    right: 23px;
+    top: 16px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    transition: 0.3s;
+    opacity: 0.8;
+    outline: none;
+}
+
+.close-popap-btn::before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    width: 25px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: #000;
+}
+
+.close-popap-btn::after {
+    position: absolute;
+    content: '';
+    top: 10px;
+    width: 25px;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: #000;
+}
+
+.close-popap-btn:hover,
+.close-popap-btn:focus {
+    transform: scale(1.2);
+    opacity: 1;
+    right: 25px;
+}
+
+.close-popap-btn:active {
+    transform: scale(1);
+    opacity: 0.3;
+    right: 23px;
+}
 
 
+.popap h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 28px;
+    color: #323232;
+    font-weight: 600;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
 
+.popap input {
+    flex-basis: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    margin-right: 37%;
+}
 
+.popap textarea {
+    flex-basis: 100%;
+    padding: 15px;
+    margin-bottom: 24px;
+    border: 2px solid rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+}
 
-
+.popap .orange-btn {
+    margin-left: auto;
+    padding: 14px 28px;
+    margin-bottom: 7px;
+}
 
 
 
