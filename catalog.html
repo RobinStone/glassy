@@ -18,7 +18,7 @@
         <nav class="main-nav">
             <ul class="menu">
                 <li class="menu-item">
-                    <a href="catalog.html" class="button">Каталог</a>
+                    <a href="catalog.html" class="button current-button">Каталог</a>
                     <div class="wrapper-list">
                         <ul class="drop-list">
                             <li><a href="#">Новинки</a></li>
@@ -80,7 +80,7 @@
                 </div>
             </form>
 
-            <a href="#" class="bag button">
+        <a href="#" class="bag button">
             <svg version="1.1" id="Layer_1" xmlns: x="0px" y="0px"
                  width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
             <g>
@@ -92,10 +92,33 @@
             </svg>
         Пусто
         </a>
+        <form class="bag-panel" action="https://echo.htmlacademy.ru" method="post">
+                <div class="background-bag">
+                    <ul class="bag-list">
+                        <li class="bag-item">
+                            <button class="abort" type="button">x</button>
+                            <div class="pic-wrapper"></div>
+                            <p class="name-icecream">Пломбир с апельсиновым джемом</p>
+                            <p class="cost-value">1,5 кг х 200 руб.</p>
+                            <p class="cost-inbag">300 руб.</p>
+                        </li>
+                        <li class="bag-item">
+                            <button class="abort" type="button">x</button>
+                            <div class="pic-wrapper"></div>
+                            <p class="name-icecream">Клубничный пломбир с присыпкой из белого шоколада</p>
+                            <p class="cost-value">1,5 кг х 300 руб.</p>
+                            <p class="cost-inbag">450 руб.</p>
+                        </li>
+                    </ul>
+                    <div class="total-sost">Итого: 750 руб.</div>
+                    <button type="submit" class="orange-btn">Оформить заказ</button>
+                </div>
+            </form>
+        
         </section>
     </div>
     <div class="bottom-row">
-         <ul class="breadcrumbs invisible">
+         <ul class="breadcrumbs">
              <li class="breadcrumbs-item">Главная</li>
              <li class="breadcrumbs-item">Каталог</li>
              <li class="breadcrumbs-item">Сливочное</li>
@@ -107,61 +130,80 @@
     </div>
 </header>
    
-<main class="page-content">
-    <section class="slider wrapper clearfix">
-        <h2 class="visually-hidden">слайдер с мороженым</h2>
-        <ul class="icecream-list">
-            <li class="icecream-item current">
-                <div class="image-wrapper">
-                    <img src="img/icecream_1.png" width="1045" height="881" alt="slide-1">
-                </div>
-                <div class="description">
-                    <p>Крем-брюле и пломбир с малиновым джемом</p>
-                    <a href="#" class="orange-btn">Давайте оба!</a>
-                </div>
-            </li>
-            <li class="icecream-item">
-                <div class="image-wrapper">
-                    <img src="img/icecream_2.png" width="1045" height="881" alt="slide-1">
-                </div>
-                <div class="description">
-                    <p>Шоколадный пломбир и лимонный сорбет</p>
-                    <a href="#" class="orange-btn">Давайте оба!</a>
-                </div>
-            </li>
-            <li class="icecream-item">
-                <div class="image-wrapper">
-                    <img src="img/icecream_3.png" width="1045" height="881" alt="slide-1">
-                </div>
-                <div class="description">
-                    <p>Пломбир с помадкой и клубничный щербет</p>
-                    <a href="#" class="orange-btn">Давайте оба!</a>
-                </div>
-            </li>
-        </ul>
-        <div class="slider-toogle">
-            <button type="button" class="slider-btn current-slide">1</button>
-            <button type="button" class="slider-btn">2</button>
-            <button type="button" class="slider-btn">3</button>
-        </div>
-    </section>
-   
-    <section class="bonus wrapper">
-        <h2 class="visually-hidden">Бонусы</h2>
-        <ul class="bonus-list">
-            <li class="bonus-item raspberries">
-                <p>Малинка даром!</p>
-                <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-                <a class="orange-btn">Хочу варенье!</a>
-            </li>
-            <li class="bonus-item chocolate">
-                <p>Шоколадки даром!</p>
-                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                <a class="orange-btn">Хочу шоколадки!</a>
-            </li>
-        </ul>
-    </section>
-    
+<main class="page-content wrapper">
+     <h1>Сливочное мороженое</h1>
+ 
+     <section class="sort">
+         <form action="https://echo.htmlacademy.ru" method="post">
+             <fieldset>
+                 <legend>Сортировка:</legend>
+                 <select name="fatset" id="fatset">
+                     <option value="faymous">по популярности</option>
+                     <option value="not many pay">сначала недорогие</option>
+                     <option value="very cost">сначала дорогие</option>
+                     <option value="on fat">по жирности</option>
+                 </select>
+             </fieldset>
+             <fieldset>
+                 <legend>Цена: 100 руб. – 500 руб.</legend>
+                 <div class="slider-wrapper">
+                     <div class="min-value"></div>
+                     <div class="max-value"></div>
+                     <div class="value-line"></div>
+                     <input type="number" class="visually-hidden" value="100" name="min-cost">
+                     <input type="number" class="visually-hidden" value="500" name="max-cost">
+                 </div>
+             </fieldset>
+             <fieldset>
+                 <legend>Жирность:</legend>
+                 <ul>
+                     <li>
+                         <input class="visually-hidden" type="radio" name="fat" id="fat0" value="0">
+                         <label for="fat0">0%</label>
+                     </li>
+                     <li>
+                         <input class="visually-hidden" type="radio" checked name="fat" id="fat10" value="10">
+                         <label for="fat0">до 10%</label>
+                     </li>
+                     <li>
+                         <input class="visually-hidden" type="radio" name="fat" id="fat30" value="30">
+                         <label for="fat30">до 30%</label>
+                     </li>
+                     <li>
+                         <input class="visually-hidden" type="radio" name="fat" id="fat-after30" value="fast">
+                         <label for="fat-after30">больше 30%</label>
+                     </li>
+                 </ul>
+             </fieldset>
+             <fieldset>
+                 <legend>Наполнители:</legend>
+                 <ul>
+                     <li>
+                         <input class="visually-hidden" type="checkbox" checked name="chocolate" value="chocolate">
+                         <label for="chocolate">шоколадные</label>
+                     </li>
+                     <li>
+                         <input class="visually-hidden" type="сheckbox" name="sugar-powder" value="sugar-powder">
+                         <label for="sugar-powder">сахарные присыпки</label>
+                     </li>
+                     <li>
+                         <input class="visually-hidden" type="сheckbox" name="fruit" value="fruit">
+                         <label for="fruit">фрукты</label>
+                     </li>
+                     <li>
+                         <input class="visually-hidden" type="сheckbox" name="syrup" value="syrup">
+                         <label for="syrup">сироп</label>
+                     </li>
+                     <li>
+                         <input class="visually-hidden" type="сheckbox" name="jam" value="jam">
+                         <label for="jam">джемы</label>
+                     </li>
+                 </ul>
+             </fieldset>
+             <button type="submit">Применить</button>
+         </form>
+     </section>
+     
     <section class="carts-icecream wrapper">
         <h2 class="visually-hidden">Карточки с мороженым</h2>
         <ul class="cart-list">
@@ -205,50 +247,117 @@
                     <a class="orange-btn">Быстрый просмотр</a>
                 </div>
             </li>
+            
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/5.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">310    <sub>/кг</sub></p>
+                    <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/6.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">380    <sub>/кг</sub></p>
+                    <p>Сливочно-кофейное с кусочками шоколада</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/7.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                <p class="cost">355    <sub>/кг</sub></p>
+                <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/8.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">415    <sub>/кг</sub></p>
+                    <p>Сливочное крем-брюле с карамельной подливкой</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/9.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">310    <sub>/кг</sub></p>
+                    <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/10.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">380    <sub>/кг</sub></p>
+                    <p>Сливочно-кофейное с кусочками шоколада</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/11.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                <p class="cost">355    <sub>/кг</sub></p>
+                <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="icecream-wrapper">
+                    <img src="img/12.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="text-wrapper">
+                    <p class="cost">415    <sub>/кг</sub></p>
+                    <p>Сливочное крем-брюле с карамельной подливкой</p>
+                    <a class="orange-btn">Быстрый просмотр</a>
+                </div>
+            </li>
         </ul>
     </section>
-    
-    <section class="advantages wrapper">
-      <h2 class="visually-hidden">Наши преимущества</h2>
-       <div class="wrapper-2">
-        <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-        <ul class="advantages-list">
-            <li class="advantages-item icecream-ico">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-            <li class="advantages-item cow-ico">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-            <li class="advantages-item leaflet-ico">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
-            <li class="advantages-item thermometer-ico">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-        </ul>
-        </div>
-    </section>
-    
-    <section class="new-and-subscription wrapper">
-        <h2 class="visually-hidden">Новое в нашем блоге и подписка</h2>
-        <article class="block new-in-blog">
-            <h3>Новое в нашем блоге</h3>
-            <a href="#" >10 способов сервировки фруктовых щербетов к столу</a>
-        </article>
-        <form class="block subscription">
-            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-            <input type="email" name="mail" placeholder="Электронная почта">
-            <button type="submit" class="orange-btn">Отправить</button>
-        </form>
-    </section>
-    
-    <section class="interactive-map">
-       <h2 class="visually-hidden">Мы расположены. Карта</h2>
-        <img class="static-map" src="img/map.jpg" width="1200" height="430" alt="Мы расположены">
-        <div id="map"></div>
-           <div class="address-block">
-            <p>Адрес главного офиса и офлайн-магазина:</p>
-            <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-            <p>Для заказов по телефону:</p>
-            <p>8 812 450-25-25</p>
-            <p>(с 10 до 20 ежедневно)</p>
-            <button type="button" id="popap-btn" class="orange-btn">Форма обратной связи</button>
-        </div>
-    </section>
-    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </main>
+
 
 <footer class="main-footer wrapper">
     <ul class="social">

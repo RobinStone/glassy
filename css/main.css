@@ -101,6 +101,10 @@ ul {
 }
 
 .main-head {
+
+}
+
+.up-row {
     display: flex;
     padding-top: 10px;
 }
@@ -406,23 +410,39 @@ ul {
     color: #e84d37;
 }
 
+.bottom-row {
+    display: flex;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.invisible {
+    display: none;
+}
+
 .call {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    position: absolute;
+    flex-direction: column;
     font-size: 14px;
     font-weight: bold;
     color: #fff;
-    right: 0;
-    top: 65px;
-    z-index: 0;
+    margin-left: auto;
+}
+
+.call a {
+    font-size: 22px;
+    text-decoration: none;
+    color: #fff;
 }
 
 /*-------------- MAIN -----------------*/
 
 .page-content {
     position: relative;
+    margin-top: -40px;
 }
 
 .slider {
@@ -576,6 +596,7 @@ ul {
 .cart-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .cart-item {
@@ -1068,6 +1089,97 @@ ul {
     padding: 14px 28px;
     margin-bottom: 7px;
 }
+
+/*----------------- CATALOG ---------------*/
+
+.current-button {
+    background-color: #d07058;
+}
+
+.bag-panel {
+    position: absolute;
+    min-width: 540px;
+    top: 49px;
+    right: 0px;
+}
+
+.bag-panel p {
+    margin: 0;
+    padding: 0;
+}
+
+.background-bag {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 7px;
+    background-color: #f8f7f4;
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);    padding: 15px 20px;
+    background-color: #f8f7f4;
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.bag-item {
+    display: flex;
+    align-items: center;
+}
+
+.bag-item p {
+    font-size: 13px;
+    font-weight: 16px;
+}
+
+.abort {
+    position: relative;
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.abort::before {
+    position: absolute;
+    content: '';
+    left: 8px;
+    top: 15px;
+    width: 13px;
+    height: 1px;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+
+.abort::after {
+    position: absolute;
+    content: '';
+    left: 8px;
+    top: 15px;
+    width: 13px;
+    height: 1px;
+    background-color: #000;
+    transform: rotate(-45deg);
+}
+
+
+.total-sost {
+    margin-left: auto;
+}
+
+.background-bag .orange-btn {
+    margin-left: auto;
+        flex-basis: 70%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
