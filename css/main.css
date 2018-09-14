@@ -1092,15 +1092,36 @@ ul {
 
 /*----------------- CATALOG ---------------*/
 
+.full svg path {
+    fill: #ff0000;
+}
+
 .current-button {
     background-color: #d07058;
 }
 
+.bag-list {
+    flex-basis: 100%;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
 .bag-panel {
+    display: none;
     position: absolute;
     min-width: 540px;
-    top: 49px;
+    top: 44px;
     right: 0px;
+    padding-top: 6px;
+}
+
+.full:hover + .bag-panel,
+.full:focus + .bag-panel {
+    display: flex;
+}
+
+.bag-panel:hover {
+    display: flex;
 }
 
 .bag-panel p {
@@ -1111,10 +1132,10 @@ ul {
 .background-bag {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px 7px;
+    padding: 21px 7px;
     background-color: #f8f7f4;
     border-radius: 5px;
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);    padding: 15px 20px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);    
     background-color: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -1122,7 +1143,20 @@ ul {
 
 .bag-item {
     display: flex;
+    min-width: 100%;
     align-items: center;
+    margin-bottom: 18px;
+}
+
+.pic-wrapper {
+    width: 35px;
+    height: 35px;
+    background: url('../img/1micro.png') no-repeat center;
+    margin-right: 15px;
+}
+
+.bag-list .bag-item:nth-child(2) .pic-wrapper {
+    background: url('../img/2micro.png') no-repeat center;
 }
 
 .bag-item p {
@@ -1134,17 +1168,29 @@ ul {
     position: relative;
     border: none;
     background: none;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     color: rgba(0, 0, 0, 0);
     cursor: pointer;
+    outline: none;
 }
+
+.abort:hover,
+.abort:focus {
+    transform: scale(1.2);
+}
+
+.abort:active {
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
 
 .abort::before {
     position: absolute;
     content: '';
     left: 8px;
-    top: 15px;
+    top: 17px;
     width: 13px;
     height: 1px;
     background-color: #000;
@@ -1155,21 +1201,41 @@ ul {
     position: absolute;
     content: '';
     left: 8px;
-    top: 15px;
+    top: 17px;
     width: 13px;
     height: 1px;
     background-color: #000;
     transform: rotate(-45deg);
 }
 
+.bag-item p:nth-child(3) {
+    max-width: 220px;
+}
 
-.total-sost {
+.bag-item p:nth-child(4) {
     margin-left: auto;
+}
+
+.bag-item p:nth-child(5) {
+    padding-right: 26px;
+    padding-left: 28px;
+}
+
+.total-cost {
+    margin-left: auto;
+    padding-right: 5px;
+    text-align: right;
+    flex-basis: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #323232;
+    margin-bottom: 10px;
 }
 
 .background-bag .orange-btn {
     margin-left: auto;
-        flex-basis: 70%;
+    margin-right: 5px;
+    padding: 12px 14px;
 }
 
 
