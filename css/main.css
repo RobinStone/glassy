@@ -416,7 +416,16 @@ ul {
 
 .breadcrumbs {
     display: flex;
-    margin-bottom: 50px;
+    padding-top: 15px;
+    margin-bottom: 60px;
+}
+
+.breadcrumbs-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 20px;
 }
 
 .invisible {
@@ -443,6 +452,14 @@ ul {
 .page-content {
     position: relative;
     margin-top: -40px;
+}
+
+.page-content h1 {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .slider {
@@ -1098,6 +1115,8 @@ ul {
 
 .current-button {
     background-color: #d07058;
+    display: block;
+    padding: 8px 15px;
 }
 
 .bag-list {
@@ -1238,6 +1257,114 @@ ul {
     padding: 12px 14px;
 }
 
+/*------------ SORTED FORM ---------*/
+
+.sort form{
+    display: flex;
+}
+
+.sort fieldset {
+    position: relative;
+    padding: 20px 0 0;
+    color: #fff;
+    border: none;
+}
+
+.sort legend {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sort .sorted-list {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.sort fieldset:nth-child(1) {
+    position: relative;
+}
+
+.select-arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 158px;
+    top: 29px;
+    z-index: 999;
+    background: url('../img/icon-down-dir.png') no-repeat center;
+}
+
+.radius-wrapper {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    min-height: 36px;
+    color: #fff;
+}
+
+.slider-wrapper {
+    width: 220px;
+}
+
+.value-line {
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    left: 10px;
+    top: 37px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.active-line {
+    position: absolute;
+    width: 54%;
+    height: 2px;
+    left: 10px;
+    top: 5%;
+    background-color: rgba(255, 255, 255);
+}
+
+.min-value, .max-value {
+    position: absolute;
+    box-sizing: content-box;
+    top: -11px;
+    display: block;
+    background-color: rgb(0, 184, 191);
+    width: 4px;
+    height: 4px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+}
+
+.min-value {
+    left: 5%;
+}
+
+.min-value {
+    left: 54%;
+}
+
+.fat-list {
+    display: flex;
+}
+
+.fat-list input[type="radio"] + label {
+    padding-left: 20px;
+    display: block;
+    margin-top: 9px;
+}
+
+.fat-list input[type="radio"] + label::before {
+    
+}
 
 
 
