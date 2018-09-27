@@ -417,7 +417,7 @@ ul {
 .breadcrumbs {
     display: flex;
     padding-top: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 43px;
 }
 
 .breadcrumbs-item a {
@@ -439,6 +439,7 @@ ul {
     font-weight: bold;
     color: #fff;
     margin-left: auto;
+    text-align: right;
 }
 
 .call a {
@@ -460,6 +461,7 @@ ul {
     color: #fff;
     font-size: 35px;
     font-weight: bold;
+    margin-bottom: 28px;
 }
 
 .slider {
@@ -622,6 +624,7 @@ ul {
     z-index: 5;
 }
 
+
 .cart-item p {
     margin: 0;
     color: #fff;
@@ -659,7 +662,11 @@ ul {
     display: none;
 }
 
-.cart-item::before {
+.hit {
+    position: relative;
+}
+
+.hit::before {
     content: '';
     position: absolute;
     width: 65px;
@@ -1259,8 +1266,13 @@ ul {
 
 /*------------ SORTED FORM ---------*/
 
+.sort {
+    margin-bottom: 20px;
+}
+
 .sort form{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .sort fieldset {
@@ -1273,15 +1285,11 @@ ul {
 .sort legend {
     position: absolute;
     top: 0px;
-    left: 10px;
+    left: 15px;
     font-size: 14px;
     font-weight: 700;
 }
 
-.sort .sorted-list {
-    appearance: none;
-    -webkit-appearance: none;
-}
 
 .sort fieldset:nth-child(1) {
     position: relative;
@@ -1303,11 +1311,22 @@ ul {
     border: none;
     border-radius: 30px;
     outline: none;
-    padding: 0 20px;
+    padding: 0 13px;
     font-size: 16px;
     font-weight: 700;
     min-height: 36px;
     color: #fff;
+    min-height: 38px;
+}
+
+.sort .sorted-list {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 35px;
+}
+
+.sort .radius-wrapper {
+    margin-right: 12px;
 }
 
 .slider-wrapper {
@@ -1316,9 +1335,9 @@ ul {
 
 .value-line {
     position: absolute;
-    width: 90%;
+    width: 77%;
     height: 2px;
-    left: 10px;
+    left: 8%;
     top: 37px;
     background-color: rgba(255, 255, 255, 0.3);
 }
@@ -1327,7 +1346,7 @@ ul {
     position: absolute;
     width: 54%;
     height: 2px;
-    left: 10px;
+    left: 20px;
     top: 5%;
     background-color: rgba(255, 255, 255);
 }
@@ -1335,44 +1354,106 @@ ul {
 .min-value, .max-value {
     position: absolute;
     box-sizing: content-box;
-    top: -11px;
+    top: -8px;
     display: block;
     background-color: rgb(0, 184, 191);
     width: 4px;
     height: 4px;
-    border: 10px solid #fff;
+    border: 8px solid #fff;
     border-radius: 50%;
 }
 
 .min-value {
-    left: 5%;
+    left: 8%;
 }
 
-.min-value {
-    left: 54%;
+.max-value {
+    left: 62%;
 }
 
 .fat-list {
     display: flex;
 }
 
+.fat-list li:last-child {
+    padding-right: 17px;
+}
+
+.sort .fat-list {
+    padding-left: 5px;
+    padding-right: 0px;
+    margin-bottom: 15px;
+}
+
 .fat-list input[type="radio"] + label {
-    padding-left: 20px;
+    position: relative;
+    padding-left: 37px;
     display: block;
-    margin-top: 9px;
+    margin-top: 10px;
+    padding-right: 13px;
 }
 
 .fat-list input[type="radio"] + label::before {
-    
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: url('../img/radio-off.svg') no-repeat center;
+    background-size: 100%;
+    left: 5px;
+    top: -2px;
 }
 
+.type-list {
+    display: flex;
+    margin-bottom: 20px;
+}
 
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 37px;
+    display: block;
+    margin-top: 10px;
+    padding-right: 13px;
+}
 
+input[type="checkbox"] + label::before {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: url('../img/checkbox-off.svg') no-repeat center;
+    background-size: 80%;
+    left: 5px;
+    top: -2px;
+}
 
+input[type="checkbox"]:checked + label::before {
+    background: url('../img/checkbox-on.svg') no-repeat center;
+    background-size: 100%;
+}
 
+.sort button[type="submit"] {
+    min-height: 35px;
+    min-width: 145px;
+    align-self: center;
+    border: 2px solid #fff;
+}
 
+/*-------------- CARTS IN CATALOG --------------*/
 
+.catalog .cart-item {
+    padding-bottom: 70px;
+    margin-bottom: 20px;
+}
 
+.catalog .text-wrapper {
+    bottom: 0;
+}
+
+.cart-item:hover .icecream-wrapper {
+    z-index: 154;
+}
 
 
 
