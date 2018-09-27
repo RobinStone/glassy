@@ -682,7 +682,7 @@ ul {
     top: -5%;
     left: -5%;
     border-radius: 10px;
-    z-index: -1;
+    z-index: 10;
     background-color: rgba(255, 255, 255, 0.21);
 }
 
@@ -1323,6 +1323,12 @@ ul {
     appearance: none;
     -webkit-appearance: none;
     padding-right: 35px;
+    cursor: pointer;
+}
+
+.sort .sorted-list:hover,
+.sort .sorted-list:focus {
+    color: #000;
 }
 
 .sort .radius-wrapper {
@@ -1361,6 +1367,13 @@ ul {
     height: 4px;
     border: 8px solid #fff;
     border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.min-value:hover, .max-value:hover,
+.min-value:focus, .max-value:focus {
+    transform: scale(1.2);
 }
 
 .min-value {
@@ -1373,6 +1386,10 @@ ul {
 
 .fat-list {
     display: flex;
+}
+
+.fat-list label {
+    cursor: pointer;
 }
 
 .fat-list li:last-child {
@@ -1402,11 +1419,26 @@ ul {
     background-size: 100%;
     left: 5px;
     top: -2px;
+    opacity: 0.5;
+}
+
+.fat-list input[type="radio"]:checked + label::before {
+    background: url('../img/radio-on.svg') no-repeat center;
+    background-size: 100%;
+}
+
+.fat-list input[type="radio"]:hover + label::before,
+.fat-list input[type="radio"]:focus + label::before {
+    opacity: 1;
 }
 
 .type-list {
     display: flex;
     margin-bottom: 20px;
+}
+
+.type-list label {
+    cursor: pointer;
 }
 
 input[type="checkbox"] + label {
@@ -1420,12 +1452,13 @@ input[type="checkbox"] + label {
 input[type="checkbox"] + label::before {
     position: absolute;
     content: '';
-    width: 22px;
-    height: 22px;
+    width: 19px;
+    height: 19px;
     background: url('../img/checkbox-off.svg') no-repeat center;
-    background-size: 80%;
-    left: 5px;
+    background-size: 81%;
+    left: 8px;
     top: -2px;
+    opacity: 0.5;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -1433,11 +1466,16 @@ input[type="checkbox"]:checked + label::before {
     background-size: 100%;
 }
 
+input[type="checkbox"] + label:hover::before {
+    opacity: 1;
+}
+
 .sort button[type="submit"] {
     min-height: 35px;
     min-width: 145px;
     align-self: center;
     border: 2px solid #fff;
+    cursor: pointer;
 }
 
 /*-------------- CARTS IN CATALOG --------------*/
@@ -1447,13 +1485,36 @@ input[type="checkbox"]:checked + label::before {
     margin-bottom: 20px;
 }
 
+.catalog .cart-item:hover {
+    position: relative;
+    z-index: 100;
+}
+
 .catalog .text-wrapper {
     bottom: 0;
 }
 
 .cart-item:hover .icecream-wrapper {
-    z-index: 154;
+    position: relative;
+    z-index: 101;
 }
+
+.cart-item:hover .text-wrapper {
+    z-index: 102;
+}
+
+.sorted-list option {
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
 
 
 

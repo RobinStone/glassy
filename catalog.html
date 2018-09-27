@@ -153,8 +153,8 @@
                 <div class="slider-wrapper radius-wrapper">
                     <div class="value-line">
                         <div class="active-line"></div>
-                        <div class="min-value"></div>
-                        <div class="max-value"></div>
+                        <div class="min-value" tabindex="0"></div>
+                        <div class="max-value" tabindex="0"></div>
                     </div>
                     <input type="number" class="visually-hidden" value="100" name="min-cost">
                     <input type="number" class="visually-hidden" value="500" name="max-cost">
@@ -169,7 +169,7 @@
                     </li>
                     <li>
                         <input class="visually-hidden" type="radio" checked name="fat" id="fat10" value="10">
-                        <label for="fat0">до 10%</label>
+                        <label for="fat10">до 10%</label>
                     </li>
                     <li>
                         <input class="visually-hidden" type="radio" name="fat" id="fat30" value="30">
@@ -185,23 +185,23 @@
                 <legend>Наполнители:</legend>
                 <ul class="type-list radius-wrapper">
                     <li>
-                        <input class="visually-hidden" type="checkbox" checked name="chocolate" value="chocolate">
+                        <input class="visually-hidden" type="checkbox" id="chocolate" checked name="chocolate" value="chocolate">
                         <label for="chocolate">шоколадные</label>
                     </li>
                     <li>
-                        <input class="visually-hidden" type="checkbox" checked name="sugar-powder" value="sugar-powder">
+                        <input class="visually-hidden" type="checkbox" id="sugar-powder" checked name="sugar-powder" value="sugar-powder">
                         <label for="sugar-powder">сахарные присыпки</label>
                     </li>
                     <li>
-                        <input class="visually-hidden" type="checkbox" name="fruit" value="fruit">
+                        <input class="visually-hidden" type="checkbox" id="fruit" name="fruit" value="fruit">
                         <label for="fruit">фрукты</label>
                     </li>
                     <li>
-                        <input class="visually-hidden" type="checkbox" name="syrup" value="syrup">
+                        <input class="visually-hidden" type="checkbox" id="syrup" name="syrup" value="syrup">
                         <label for="syrup">сиропы</label>
                     </li>
                     <li>
-                        <input class="visually-hidden" type="checkbox" name="jam" value="jam">
+                        <input class="visually-hidden" type="checkbox" id="jam" name="jam" value="jam">
                         <label for="jam">джеммы</label>
                     </li>
                 </ul>
@@ -213,7 +213,7 @@
     <section class="carts-icecream">
         <h2 class="visually-hidden">Карточки с мороженым</h2>
         <ul class="cart-list catalog">
-            <li class="cart-item borders">
+            <li class="cart-item">
                 <div class="icecream-wrapper">
                     <img src="img/1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 </div>
